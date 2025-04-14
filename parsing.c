@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojrhaide <ojrhaide@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/14 16:52:14 by ojrhaide          #+#    #+#             */
+/*   Updated: 2025/04/14 16:52:16 by ojrhaide         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	duplicated_check(t_list *stack_a)
@@ -20,7 +32,7 @@ void	duplicated_check(t_list *stack_a)
 			if (j > 1)
 			{
 				free_stack(stack_a);
-				errors(1);
+				Fatals(1);
 			}
 			p = p->next;
 		}
@@ -38,7 +50,7 @@ void	only_digits_check(char *s)
 	while (s[i])
 	{
 		if (!ft_isdigit(s[i]))
-			errors(1);
+			Fatals(1);
 		i++;
 	}
 }
@@ -57,7 +69,7 @@ void	is_it_valid(char *s)
 		if (nb > INT_MAX || nb < INT_MIN)
 		{
 			free_all(str);
-			errors(1);
+			Fatals(1);
 		}
 		only_digits_check(str[i]);
 		i++;
@@ -75,7 +87,7 @@ void	parsing(char **av)
 	while (av[i])
 	{
 		if (ft_strlen(av[i]) == 0)
-			errors(1);
+			Fatals(1);
 		is_it_valid(av[i]);
 		nbr = 0;
 		j = 0;
@@ -86,7 +98,7 @@ void	parsing(char **av)
 			j++;
 		}
 		if (nbr == 0)
-			errors(1);
+			Fatals(1);
 		i++;
 	}
 }

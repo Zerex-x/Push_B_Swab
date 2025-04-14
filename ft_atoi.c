@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojrhaide <ojrhaide@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/14 16:53:13 by ojrhaide          #+#    #+#             */
+/*   Updated: 2025/04/14 16:53:15 by ojrhaide         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static int	skip_sp(char *str, int *pi)
@@ -34,7 +46,7 @@ long	ft_atoi(const char	*str)
 		prev_r = r;
 		r = r * 10 + (((char *)str)[i++] - 48);
 		if ((r / 10) != prev_r)
-			errors(1);
+			Fatals(1);
 	}
 	return (r * s);
 }

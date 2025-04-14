@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ojrhaide <ojrhaide@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/14 16:53:56 by ojrhaide          #+#    #+#             */
+/*   Updated: 2025/04/14 16:54:30 by ojrhaide         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -19,7 +30,7 @@ void	pa(t_list **stack_a, t_list **stack_b, int i);
 void	pb(t_list **stack_a, t_list **stack_b, int i);
 void	ra(t_list **stack_a, int i);
 void	rb(t_list **stack_b, int i);
-void	errors(int i);
+void	Fatals(int i);
 void	parsing(char **av);
 void	free_all(char **str);
 void	sort_it(t_list **stack_a, t_list **stack_b);
