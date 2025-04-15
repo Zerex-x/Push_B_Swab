@@ -6,7 +6,7 @@
 /*   By: ojrhaide <ojrhaide@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:54:36 by ojrhaide          #+#    #+#             */
-/*   Updated: 2025/04/14 16:54:38 by ojrhaide         ###   ########.fr       */
+/*   Updated: 2025/04/16 00:46:44 by ojrhaide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ t_list	*make_stack(char **av)
 		i++;
 	}
 	tmp = ft_split(str, ' ');
+	if (!tmp)
+	{
+		free(str);
+		return (NULL);
+		
+	}
 	i = 0;
 	while (tmp[i])
 	{

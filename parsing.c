@@ -6,7 +6,7 @@
 /*   By: ojrhaide <ojrhaide@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 16:52:14 by ojrhaide          #+#    #+#             */
-/*   Updated: 2025/04/14 16:52:16 by ojrhaide         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:56:35 by ojrhaide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ void	is_it_valid(char *s)
 	char	**str;
 
 	str = ft_split(s, ' ');
+	if (!str)
+		return ;
 	i = 0;
 	while (str[i])
 	{
